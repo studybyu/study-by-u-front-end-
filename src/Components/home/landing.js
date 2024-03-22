@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-// import { Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import { Container, Row, Col } from "react-bootstrap";
+
+import logo from "../../assets/6222537.jpg";
 
 function Landing() {
   // State for countdown timer
@@ -21,23 +22,20 @@ function Landing() {
   const hours = Math.floor((countDown / (1000 * 60 * 60)) % 24);
   const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
 
-  // Background style
-  const backgroundStyle = {
-    height: "80vh",
-    backgroundImage: "url('/your-image-path.jpg')", // Replace with your image path
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-  };
-
   return (
-    <div style={backgroundStyle}>
-      <h1>Coming Soon</h1>
-      <h2>{`${days}d ${hours}h ${minutes}m ${seconds}s`}</h2>
-    </div>
+    <Container className="mt-5 pt-5">
+      <Row>
+        <Col xs={12} md={6}>
+          <img src={logo} alt="logo" className="img-fluid" />
+        </Col>
+        <Col xs={12} md={6} className="d-flex align-items-center">
+          <div>
+            <h1>Coming Soon</h1>
+            <h2>{`${days}d ${hours}h ${minutes}m ${seconds}s`}</h2>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
