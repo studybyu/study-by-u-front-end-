@@ -1,38 +1,93 @@
-.App {
+:root {
+  --main-color: #0046fc;
+  --dark-headline: #0c121c;
+  --dark-text: #1e293b;
+  --light-text: #b8bfc6;
+  --light-color: #b4cfee;
+  --light-background: #ffffff;
+  --border-color: #2b00b8;
+}
+
+/* Example usage of the color variable */
+body {
+  background-color: var(--light-background);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  color: var(--dark-text);
+}
+
+.h1,
+h2,
+h3,
+h4 {
+  color: var(--main-color);
+}
+
+.hr {
+  color: var(--dark-headline);
+}
+
+.Header {
+  /* background-image: linear-gradient(to right, var(--light-color), var(--light-text)); */
+  box-shadow: #000000 0px 0px 5px;
+  color: var(--light-background);
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth-btn {
+  border: none;
+  padding: 0.2rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 4px 11px;
+  cursor: pointer;
+
+  border-radius: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+  background-color: var(--dark-headline);
+  color: var(--light-background);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: #0c121c 0px 0px 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Login.css */
+.login-background,
+.register-background {
+  background-color: var(--main-color);
+  box-shadow: #000000 0px 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-card {
+  background-color: var();
+  border-radius: 10px;
+  box-shadow: #000000 0px 0px 0px;
+  padding: 2rem;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.login-card .btn-primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+.login-card .form-label {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.login-card .form-control {
+  color: #000000;
+}
+
+/* Additional styling to ensure the image and card align nicely on all device sizes */
+@media (max-width: 768px) {
+  .login-card {
+    margin-top: 20px;
   }
 }
