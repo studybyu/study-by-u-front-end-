@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
 
 function Header() {
   return (
